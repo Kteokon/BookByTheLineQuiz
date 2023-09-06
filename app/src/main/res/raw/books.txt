@@ -1,0 +1,50 @@
+[
+  {
+    "name": "alice_in_wonderland",
+    "firstLine": "Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister was reading, but it had no pictures or conversations in it, \"and what is the use of a book,\" thought Alice \"without pictures or conversations?\""
+  },
+  {
+    "name": "great_expectations",
+    "firstLine": "My father’s family name being Pirrip, and my Christian name Philip, my infant tongue could make of both names nothing longer or more explicit than Pip"
+  },
+  {
+    "name": "adventures_of_huckleberry_finn",
+    "firstLine": "You don’t know about me without you have read a book by the name of The Adventures of Tom Sawyer; but that ain’t no matter"
+  },
+  {
+    "name": "the_colour_of_magic",
+    "firstLine": "In a distant and second-hand set of dimensions, in an astral plane that was never meant to fly, the curling star-mists waver and part…"
+  },
+  {
+    "name": "harry_potter",
+    "firstLine": "Mr. and Mrs. Dursley, of number four, Privet Drive, were proud to say that they were perfectly normal, thank you very much"
+  },
+  {
+    "name": "the_hobbit",
+    "firstLine": "In a hole in the ground there lived a hobbit"
+  },
+  {
+    "name": "the_lord_of_the_rings",
+    "firstLine": "When Mr. Bilbo Baggins of Bag End announced that he would shortly be celebrating his eleventy-first birthday with a party of special magnificence, there was much talk and excitement in Hobbiton"
+  },
+  {
+    "name": "moby_dick",
+    "firstLine": "Call me Ishmael"
+  },
+  {
+    "name": "the_count_of_monte_cristo",
+    "firstLine": "On the 24th of February, 1815, the look-out at Notre-Dame de la Garde signalled the three-master, the Pharaon from Smyrna, Trieste, and Naples"
+  },
+  {
+    "name": "winnie_the_pooh",
+    "firstLine": "Here is Edward Bear, coming downstairs now, bump, bump, bump, on the back of his head, behind Christopher Robin"
+  },
+  {
+    "name": "ten_little_niggers",
+    "firstLine": "In the corner of a first-class smoking carriage, Mr. Justice Wargrave, lately retired from the bench, puffed at a cigar and ran an interested eye through the political news in the Times"
+  },
+  {
+    "name": "dracula",
+    "firstLine": "3 May. Bistritz.—Left Munich at 8:35 P. M., on 1st May, arriving at Vienna early next morning; should have arrived at 6:46, but train was an hour late"
+  }
+]
