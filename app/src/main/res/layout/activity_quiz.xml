@@ -45,128 +45,25 @@
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-<!--    <androidx.constraintlayout.widget.ConstraintLayout-->
-<!--        android:id="@+id/linearLayout"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:orientation="vertical"-->
-<!--        android:padding="25dp"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintHorizontal_bias="0.0"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">-->
-
-<!--        <LinearLayout-->
-<!--            android:id="@+id/svtext"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="170dp"-->
-<!--            android:layout_marginBottom="50dp"-->
-<!--            android:orientation="vertical"-->
-<!--            app:layout_constraintBottom_toTopOf="@+id/covers"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintHorizontal_bias="0.5"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toTopOf="parent"-->
-<!--            app:layout_constraintVertical_chainStyle="spread">-->
-
-<!--            <ScrollView-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:padding="10dp">-->
-
-<!--                <TextView-->
-<!--                    android:id="@+id/firstLine"-->
-<!--                    android:layout_width="fill_parent"-->
-<!--                    android:layout_height="170dp"-->
-<!--                    android:layout_weight="1.0"-->
-<!--                    android:fontFamily="@font/oswald_bold"-->
-<!--                    android:shadowColor="?android:attr/colorBackground"-->
-<!--                    android:shadowDx="0"-->
-<!--                    android:shadowDy="0"-->
-<!--                    android:shadowRadius="5"-->
-<!--                    android:text="My father’s family name being Pirrip, and my Christian name Philip, my infant tongue could make of both names nothing longer or more explicit than Pip"-->
-<!--                    android:textAlignment="center"-->
-<!--                    android:textColor="@color/light_blue"-->
-<!--                    android:textSize="24dp" />-->
-<!--            </ScrollView>-->
-<!--        </LinearLayout>-->
-
-<!--        <LinearLayout-->
-<!--            android:id="@+id/covers"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="150sp"-->
-<!--            android:orientation="horizontal"-->
-<!--            app:layout_constraintBottom_toBottomOf="parent"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintHorizontal_bias="0.5"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toBottomOf="@+id/svtext">-->
-
-<!--            <ImageView-->
-<!--                android:id="@+id/cover1"-->
-<!--                android:layout_width="0dp"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginEnd="10dp"-->
-<!--                android:layout_weight="1"-->
-<!--                android:src="@drawable/alice_in_wonderland" />-->
-
-<!--            <ImageView-->
-<!--                android:id="@+id/cover2"-->
-<!--                android:layout_width="0dp"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginStart="10dp"-->
-<!--                android:layout_marginEnd="10dp"-->
-<!--                android:layout_weight="1"-->
-<!--                android:src="@drawable/alice_in_wonderland" />-->
-
-<!--            <ImageView-->
-<!--                android:id="@+id/cover3"-->
-<!--                android:layout_width="0dp"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginStart="10dp"-->
-<!--                android:layout_weight="1"-->
-<!--                android:src="@drawable/alice_in_wonderland" />-->
-<!--        </LinearLayout>-->
-
-<!--        <Button-->
-<!--            android:id="@+id/startOver"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_gravity="center"-->
-<!--            android:layout_marginTop="50dp"-->
-<!--            android:fontFamily="@font/roboto"-->
-<!--            android:padding="5dp"-->
-<!--            android:text="start over"-->
-<!--            android:textSize="24dp"-->
-<!--            android:visibility="gone"-->
-<!--            app:cornerRadius="15dp"-->
-<!--            app:layout_constraintBottom_toBottomOf="parent"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toBottomOf="@+id/svtext" />-->
-<!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
-
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="vertical"
-        android:padding="25dp"
+        android:padding="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
 
-
         <LinearLayout
             android:id="@+id/svtext"
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:minHeight="30dp"
             android:layout_weight="1"
             android:gravity="center"
-            android:layout_marginBottom="50dp"
             android:orientation="vertical">
 
             <ScrollView
@@ -195,6 +92,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
+            android:layout_marginTop="50dp"
             android:orientation="horizontal">
 
             <ImageView
@@ -223,6 +121,74 @@
                 android:src="@drawable/alice_in_wonderland" />
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/theResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/oswald_bold"
+                android:shadowColor="?android:attr/colorBackground"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="5"
+                android:text="The result"
+                android:textAlignment="center"
+                android:textColor="@color/light_blue"
+                android:textSize="24dp" />
+
+            <LinearLayout
+                android:id="@+id/titles"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="2"
+                    android:fontFamily="@font/oswald_bold"
+                    android:text="First line"
+                    android:gravity="center"
+                    android:textColor="@color/light_blue" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/oswald_bold"
+                    android:text="Right answer"
+                    android:gravity="center"
+                    android:textColor="@color/light_blue" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/oswald_bold"
+                    android:text="Your answer"
+                    android:gravity="center"
+                    android:textColor="@color/light_blue" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/answers"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4"
+            android:layout_marginBottom="25dp"
+            android:visibility="gone" />
+
         <Button
             android:id="@+id/startOver"
             android:layout_width="match_parent"
@@ -235,8 +201,8 @@
             android:padding="5dp"
             android:text="start over"
             android:textSize="24dp"
-            android:visibility="gone"
-            app:cornerRadius="15dp" />
+            app:cornerRadius="15dp"
+            android:visibility="gone" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

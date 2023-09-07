@@ -1,9 +1,10 @@
 package com.example.bookbythelinequiz;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -23,12 +24,14 @@ import java.util.List;
 public class QuizActivity extends AppCompatActivity {
     ArrayList<Book> books;
     ArrayList<String> coversNames;
+    ArrayList<String> usersAnswers = new ArrayList<>();
     int answeredQuestions, rightAnswers;
 
     TextView firstLine;
     Button startOverButton;
     List<ImageView> covers;
-    LinearLayout llCovers;
+    LinearLayout llCovers, llTitles;
+    RecyclerView answers;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,20 +45,27 @@ public class QuizActivity extends AppCompatActivity {
         ImageView cover3 = findViewById(R.id.cover3);
         covers = Arrays.asList(cover1, cover2, cover3);
         llCovers = findViewById(R.id.covers);
+        llTitles = findViewById(R.id.titles);
+        answers = findViewById(R.id.answers);
+        answers.setLayoutManager(new LinearLayoutManager(this));
 
         for (ImageView cover: covers) {
             cover.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Log.d("mytag", "clicked: " +  v.getTag() + "\nthe line: " + firstLine.getTag());
                     answeredQuestions++;
+                    usersAnswers.add((String) v.getTag());
                     if (v.getTag().equals(firstLine.getTag())) {
                         rightAnswers++;
                     }
                     if (answeredQuestions == books.size()) {
                         llCovers.setVisibility(View.GONE);
                         startOverButton.setVisibility(View.VISIBLE);
-                        firstLine.setText(Integer.toString(rightAnswers) + " out of " + books.size() + " is right");
+                        llTitles.setVisibility(View.VISIBLE);
+                        answers.setVisibility(View.VISIBLE);
+                        firstLine.setText(rightAnswers + " out of " + books.size() + " are correct");
+                        AnswersListAdapter adapter = new AnswersListAdapter(getApplicationContext(), books, usersAnswers);
+                        answers.setAdapter(adapter);
                     }
                     else {
                         setCovers();
@@ -83,6 +93,8 @@ public class QuizActivity extends AppCompatActivity {
     private void startOver() {
         answeredQuestions = 0;
         rightAnswers = 0;
+        usersAnswers.clear();
+
         Collections.shuffle(books);
         coversNames = new ArrayList<>();
         for (int i = 0; i < books.size(); i++) {
@@ -90,6 +102,8 @@ public class QuizActivity extends AppCompatActivity {
         }
         llCovers.setVisibility(View.VISIBLE);
         startOverButton.setVisibility(View.GONE);
+        llTitles.setVisibility(View.GONE);
+        answers.setVisibility(View.GONE);
         setCovers();
     }
 
@@ -100,8 +114,8 @@ public class QuizActivity extends AppCompatActivity {
         List<String> chosenCovers = new ArrayList<>();
         chosenCovers.add(book.name);
         while (chosenCovers.size() < 3) {
-            int randomCover = (int) (Math.random() * coversNames.size());
-            String cover = coversNames.get(randomCover);
+            int randomCover = (int) (Math.random() * books.size());
+            String cover = books.get(randomCover).name;
             if (!(chosenCovers.contains(cover))) {
                 chosenCovers.add(cover);
             }

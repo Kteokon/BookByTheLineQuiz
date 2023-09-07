@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/answerLL"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:padding="10dp"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/firstLineTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:layout_weight="2"
+        android:fontFamily="@font/oswald_bold"
+        android:text="My father’s family name being Pirrip, and my Christian name Philip, my infant tongue could make of both names nothing longer or more explicit than Pip" />
+
+    <ImageView
+        android:id="@+id/rightAnswer"
+        android:layout_width="0dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_weight="1"
+        android:src="@drawable/alice_in_wonderland" />
+
+    <ImageView
+        android:id="@+id/usersAnswer"
+        android:layout_width="0dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="5dp"
+        android:layout_weight="1"
+        android:src="@drawable/alice_in_wonderland" />
+</LinearLayout>
